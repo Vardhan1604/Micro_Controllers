@@ -1,0 +1,6 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\Seven_Segment.obj",
+".\Objects\Delay.obj" 
+TO ".\Objects\Seven_Segment" 
+PRINT(".\Listings\Seven_Segment.m51") CODE( 0X0000-0X0FFF )

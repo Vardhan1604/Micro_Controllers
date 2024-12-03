@@ -1,0 +1,23 @@
+
+#include"main.h"
+
+#define DHT11_PORT GPIOA
+#define DHT11_PIN  GPIO_PIN_1
+
+
+    void DHT11_Init();
+	void DHT11_Start (void);
+	uint8_t Check_Response (void);
+	uint8_t DHT11_Read (void);
+	uint8_t Rh_byte1 = DHT11_Read ();
+	uint8_t Rh_byte2 = DHT11_Read ();
+	uint8_t Temp_byte1 = DHT11_Read ();
+	uint8_t Temp_byte2 = DHT11_Read ();
+	uint16_t SUM = DHT11_Read();
+
+	uint16_t TEMP = Temp_byte1;
+	uint16_t RH = Rh_byte1;
+    float Temperature = (float) TEMP;
+    float Humidity = (float) RH;
+    HAL_Delay(3000);
+

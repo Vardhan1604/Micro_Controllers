@@ -1,0 +1,20 @@
+/*
+ * DHT11.h
+ *
+ *  Created on: Oct 6, 2024
+ *      Author: maniv
+ */
+
+
+
+#ifndef SRC_DHT11_H_
+#define SRC_DHT11_H_
+
+#include"main.h"
+
+void microDelay (uint16_t delay);
+uint8_t DHT11_Start (void);
+uint8_t DHT11_Read (void);
+
+
+#endif /* SRC_DHT11_H_ */

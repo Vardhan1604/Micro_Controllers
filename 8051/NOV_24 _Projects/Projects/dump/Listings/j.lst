@@ -1,0 +1,30 @@
+C51 COMPILER V9.60.7.0   J                                                                 11/28/2024 10:55:14 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE J
+OBJECT MODULE PLACED IN .\Objects\j.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE j.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\j.lst) 
+                    -TABS(2) OBJECT(.\Objects\j.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          void main()
+   4          {
+   5   1        P2 = 0xff;
+   6   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      4    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,60 @@
+#include "DHT11.h"
+
+// Static variables to hold the DHT11 port and pin
+static GPIO_TypeDef* DHT11_PORT;
+static uint16_t DHT11_PIN;
+
+void DHT11_Init(GPIO_TypeDef* port, uint16_t pin)
+{
+    DHT11_PORT = port; // Store the port
+    DHT11_PIN = pin;   // Store the pin
+}
+
+// (Include the microDelay function and DHT11_Start, DHT11_Read, DHT11_GetData implementations)
+// Use DHT11_PORT and DHT11_PIN in your implementations instead of hardcoded values.
+
+void microDelay(uint16_t delay)
+{
+    __HAL_TIM_SET_COUNTER(&htim3, 0); // Reset the timer counter
+    while (__HAL_TIM_GET_COUNTER(&htim3) < delay); // Wait for the specified delay
+}
+
+uint8_t DHT11_Start(void)
+{
+    uint8_t Response = 0;
+    GPIO_InitTypeDef GPIO_InitStructPrivate = {0};
+
+    // Configure the pin as output
+    GPIO_InitStructPrivate.Pin = DHT11_PIN;
+    GPIO_InitStructPrivate.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStructPrivate.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStructPrivate.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(DHT11_PORT, &GPIO_InitStructPrivate);
+
+    HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, 0);   // Pull the pin low
+    HAL_Delay(20);                                   // Wait for 20ms
+    HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, 1);   // Pull the pin high
+    microDelay(30);                                  // Wait for 30us
+
+    // Set the pin as input to read the response
+    GPIO_InitStructPrivate.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStructPrivate.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(DHT11_PORT, &GPIO_InitStructPrivate);
+
+    microDelay(40); // Wait for DHT11 to respond
+
+    // Check if DHT11 is pulling the pin low
+    if (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)))
+    {
+        microDelay(80); // Wait for 80us
+        if ((HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)))
+            Response = 1; // Set response if pin goes high
+    }
+
+    return Response; // Return the response status
+}
+
+// Implement DHT11_Read and DHT11_GetData similarly using DHT11_PORT and DHT11_PIN
+
+
+

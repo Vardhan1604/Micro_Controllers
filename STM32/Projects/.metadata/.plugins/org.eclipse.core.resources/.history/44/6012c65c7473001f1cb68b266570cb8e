@@ -1,0 +1,97 @@
+#include "liquidcrystal_i2c.h"
+
+// Define I2C address of the LCD
+#define LCD_ADDR 0x27
+
+// Define some LCD commands
+#define LCD_CLEAR_DISPLAY 0x01
+#define LCD_RETURN_HOME 0x02
+#define LCD_ENTRY_MODE_SET 0x04
+#define LCD_DISPLAY_CONTROL 0x08
+#define LCD_CURSOR_SHIFT 0x10
+#define LCD_FUNCTION_SET 0x20
+#define LCD_SET_CGRAM_ADDR 0x40
+#define LCD_SET_DDRAM_ADDR 0x80
+
+// Define control commands
+#define LCD_ENTRY_RIGHT 0x00
+#define LCD_ENTRY_LEFT 0x02
+#define LCD_ENTRY_SHIFT_INCREMENT 0x01
+#define LCD_ENTRY_SHIFT_DECREMENT 0x00
+
+#define LCD_DISPLAY_ON 0x04
+#define LCD_DISPLAY_OFF 0x00
+#define LCD_CURSOR_ON 0x02
+#define LCD_CURSOR_OFF 0x00
+#define LCD_BLINK_ON 0x01
+#define LCD_BLINK_OFF 0x00
+
+#define LCD_4BIT_MODE 0x00
+#define LCD_8BIT_MODE 0x10
+
+// Private function prototypes
+static void lcd_send_command(uint8_t cmd);
+static void lcd_send_data(uint8_t data);
+
+void lcd_Init(void)
+{
+    HAL_Delay(50); // Wait for LCD to power up
+
+    // Initialization sequence
+    lcd_send_command(0x30); // Function set: 8-bit mode
+    HAL_Delay(5);
+    lcd_send_command(0x30); // Function set: 8-bit mode
+    HAL_Delay(1);
+    lcd_send_command(0x30); // Function set: 8-bit mode
+    HAL_Delay(1);
+
+    lcd_send_command(0x20); // Function set: 4-bit mode
+    lcd_send_command(LCD_FUNCTION_SET | LCD_4BIT_MODE | 0x08); // 2 lines, 5x7 matrix
+    lcd_send_command(LCD_DISPLAY_CONTROL | LCD_DISPLAY_ON | LCD_CURSOR_OFF | LCD_BLINK_OFF); // Display on, cursor off
+    lcd_send_command(LCD_CLEAR_DISPLAY); // Clear display
+    HAL_Delay(2);
+    lcd_send_command(LCD_ENTRY_MODE_SET | LCD_ENTRY_LEFT | LCD_ENTRY_SHIFT_DECREMENT); // Entry mode
+}
+
+void lcd_Clear(void)
+{
+    lcd_send_command(LCD_CLEAR_DISPLAY);
+    HAL_Delay(2);
+}
+
+void lcd_SetCursor(uint8_t row, uint8_t col)
+{
+    uint8_t address = 0x80 + (row ? 0x40 : 0) + col;
+    lcd_send_command(address);
+}
+
+void lcd_PrintStr(const char *str)
+{
+    while (*str)
+    {
+        lcd_send_data(*str++);
+    }
+}
+
+void lcd_PrintInt(uint8_t num)
+{
+    char buffer[4];
+    snprintf(buffer, sizeof(buffer), "%d", num);
+    lcd_PrintStr(buffer);
+}
+
+static void lcd_send_command(uint8_t cmd)
+{
+    uint8_t data[2];
+    data[0] = cmd;
+    data[1] = cmd << 4;
+    HAL_I2C_Master_Transmit(&hi2c1, LCD_ADDR, data, sizeof(data), HAL_MAX_DELAY);
+}
+
+static void lcd_send_data(uint8_t data)
+{
+    uint8_t txData[2];
+    txData[0] = data | 0x01; // Data with RS = 1
+    txData[1] = (data << 4) | 0x01;
+    HAL_I2C_Master_Transmit(&hi2c1, LCD_ADDR, txData, sizeof(txData), HAL_MAX_DELAY);
+}

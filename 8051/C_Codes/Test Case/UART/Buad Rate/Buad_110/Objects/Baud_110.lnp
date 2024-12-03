@@ -1,0 +1,6 @@
+".\Objects\STARTUP.obj",
+".\Objects\Uart.obj",
+".\Objects\main.obj" 
+TO ".\Objects\Baud_110" 
+PRINT(".\Listings\Baud_110.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

@@ -1,0 +1,33 @@
+#ifndef LCD_H
+#define LCD_H
+
+#include <stm32wba52xx.h>
+
+#include "main.h"
+
+// Control pin definitions
+#define RS_pin GPIOB_PIN_7   // Change to your actual pin
+#define RW_pin GPIOB_PIN_6   // Change to your actual pin
+#define EN_pin GPIOB_PIN_13  // Change to your actual pin
+#define D0 GPIOB_PIN_14
+#define D1 GPIOB_PIN_0
+#define D2 GPIOB_PIN_9
+#define D3 GPIOB_PIN_15
+#define D4 GPIOA_PIN_9
+#define D5 GPIO_PIN_12
+#define D6 GPIOA_PIN_15
+#define D7 GPIOB_PIN_3
+
+
+
+// Data pins array for D0 to D7
+extern GPIO_TypeDef* data_ports[8];
+extern uint16_t data_pins[8];
+
+// Function prototypes
+void LCD_cmd(unsigned char cmd);
+void LCD_data(unsigned char data);
+void LCD_init(void);
+void LCD_Print(const char *str);
+
+#endif // LCD_H

@@ -1,0 +1,96 @@
+
+
+
+#define DHT11_PORT GPIOB
+#define DHT11_PIN GPIO_PIN_7
+#define INITIAL_DELAY_MS 20
+#define RESPONSE_DELAY_US 30
+#define READ_DELAY_US 40
+#define ERROR_MESSAGE "error"
+#define TEMP_MSG "TEMP: %.2f C"
+#define HUMI_MSG "HUMI: %.2f %%"
+
+uint8_t RHI, RHD, TCI, TCD, SUM;
+float tCelsius = 0;
+float tFahrenheit = 0;
+float RH = 0;
+
+void microDelay (uint16_t delay) {
+    __HAL_TIM_SET_COUNTER(&htim3, 0);
+    while (__HAL_TIM_GET_COUNTER(&htim3) < delay);
+}
+
+uint8_t DHT11_Start (void) {
+    uint8_t Response = 0;
+    GPIO_InitTypeDef GPIO_InitStructPrivate = {0};
+
+    // Set pin as output to start communication
+    GPIO_InitStructPrivate.Pin = DHT11_PIN;
+    GPIO_InitStructPrivate.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStructPrivate.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStructPrivate.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(DHT11_PORT, &GPIO_InitStructPrivate);
+    HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, 0);
+    HAL_Delay(INITIAL_DELAY_MS);
+
+    // Switch to input
+    HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, 1);
+    microDelay(RESPONSE_DELAY_US);
+
+    GPIO_InitStructPrivate.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStructPrivate.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(DHT11_PORT, &GPIO_InitStructPrivate);
+    microDelay(40);
+
+    if (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN))) {
+        microDelay(80);
+        if (HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)) {
+            Response = 1;
+        }
+    }
+
+    return Response;
+}
+
+uint8_t DHT11_Read(void) {
+    uint8_t data = 0;
+    for (uint8_t a = 0; a < 8; a++) {
+        while (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)));
+        microDelay(READ_DELAY_US);
+        if (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN))) {
+            data &= ~(1 << (7 - a)); // Bit is 0
+        } else {
+            data |= (1 << (7 - a)); // Bit is 1
+        }
+        while (HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN));
+    }
+    return data;
+}
+
+void ReadAndDisplayData(void) {
+    if (DHT11_Start()) {
+        RHI = DHT11_Read(); // Relative humidity integral
+        RHD = DHT11_Read(); // Relative humidity decimal
+        TCI = DHT11_Read(); // Celsius integral
+        TCD = DHT11_Read(); // Celsius decimal
+        SUM = DHT11_Read(); // Check sum
+
+        if (RHI + RHD + TCI + TCD == SUM) {
+            tCelsius = (float)TCI + (float)(TCD / 10.0);
+            tFahrenheit = tCelsius * 9.0 / 5.0 + 32.0;
+            RH = (float)RHI + (float)(RHD / 10.0);
+
+            char str1[16];
+            char str2[16];
+            lcd_put_cur(0, 0);
+            sprintf(str1, TEMP_MSG, tCelsius);
+            lcd_send_string(str1);
+            lcd_put_cur(1, 0);
+            sprintf(str2, HUMI_MSG, RH);
+            lcd_send_string(str2);
+        } else {
+            lcd_put_cur(0, 0);
+            lcd_send_string(ERROR_MESSAGE);
+        }
+    }
+}

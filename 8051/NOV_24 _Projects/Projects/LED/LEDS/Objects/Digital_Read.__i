@@ -1,0 +1,1 @@
+"..\..\..\Lib\Digital_Read\Digital_Read.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Digital_Read.lst) TABS (2) OBJECT(.\Objects\Digital_Read.obj)

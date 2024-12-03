@@ -1,0 +1,1 @@
+"..\..\..\Lib\Switch\Switch.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Switch.lst) TABS (2) OBJECT(.\Objects\Switch.obj)

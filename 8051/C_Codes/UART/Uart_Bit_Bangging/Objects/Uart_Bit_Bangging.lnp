@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\Uart_Bit_Bangging" 
+PRINT(".\Listings\Uart_Bit_Bangging.m51") CODE( 0X0000-0X0FFF )

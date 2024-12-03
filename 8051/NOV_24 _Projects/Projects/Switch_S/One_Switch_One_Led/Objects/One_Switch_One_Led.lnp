@@ -1,0 +1,7 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\LED.obj",
+".\Objects\Switch.obj",
+".\Objects\Delay.obj" 
+TO ".\Objects\One_Switch_One_Led" 
+PRINT(".\Listings\One_Switch_One_Led.m51") CODE( 0X0000-0X0FFF )

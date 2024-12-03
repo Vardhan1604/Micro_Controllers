@@ -1,0 +1,26 @@
+/*
+ * DHT11.h
+ *
+ *  Created on: Oct 6, 2024
+ *      Author: maniv
+ */
+
+#ifndef SRC_DHT11_H_
+#define SRC_DHT11_H_
+
+#include"main.h"
+#include"stdio.h"
+#include"i2c-lcd.h"
+
+#define DHT11_PORT GPIOB
+#define DHT11_PIN GPIO_PIN_7
+
+void DISPLAYDHT(void);
+uint8_t DHT11_Start (void);
+uint8_t DHT11_Read (void);
+void microDelay (uint16_t delay);
+
+
+
+
+#endif /* SRC_DHT11_H_ */

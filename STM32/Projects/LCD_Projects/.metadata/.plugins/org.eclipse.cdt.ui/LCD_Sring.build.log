@@ -1,0 +1,10 @@
+19:11:04 **** Incremental Build of configuration Debug for project LCD_Sring ****
+make -j12 all 
+arm-none-eabi-size  LCD_Sring.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9980	    140	   1900	  12020	   2ef4	LCD_Sring.elf
+Finished building: default.size.stdout
+ 
+
+19:11:04 Build Finished. 0 errors, 0 warnings. (took 193ms)
+

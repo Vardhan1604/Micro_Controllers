@@ -1,0 +1,44 @@
+/*
+ * DHT11.h
+ *
+ *  Created on: Oct 6, 2024
+ *      Author: maniv
+ */
+
+#ifndef SRC_DHT11_H_
+#define SRC_DHT11_H_
+
+#ifndef DHT11_H
+#define DHT11_H
+
+//#include "stm32f4xx_hal.h"  // Adjust based on your STM32 series
+//#include <stdint.h>
+#include"main.h"
+// DHT11 Configuration
+#define DHT11_PORT GPIOB
+#define DHT11_PIN GPIO_PIN_7
+
+// DHT11 Response Timing
+#define INITIAL_DELAY_MS 20
+#define RESPONSE_DELAY_US 30
+#define READ_DELAY_US 40
+
+// Error and Message Definitions
+#define ERROR_MESSAGE "error"
+#define TEMP_MSG "TEMP: %.2f C"
+#define HUMI_MSG "HUMI: %.2f %%"
+
+// Function Declarations
+void microDelay(uint16_t delay);
+uint8_t DHT11_Start(void);
+uint8_t DHT11_Read(void);
+void ReadAndDisplayData(void);
+
+// Global Variables
+extern uint8_t RHI, RHD, TCI, TCD, SUM;
+extern float tCelsius, tFahrenheit, RH;
+
+#endif // DHT11_H
+
+
+#endif /* SRC_DHT11_H_ */

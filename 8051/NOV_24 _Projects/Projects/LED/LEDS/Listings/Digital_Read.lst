@@ -1,0 +1,63 @@
+C51 COMPILER V9.60.7.0   DIGITAL_READ                                                      11/15/2024 19:04:43 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE DIGITAL_READ
+OBJECT MODULE PLACED IN .\Objects\Digital_Read.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\..\..\Lib\Digital_Read\Digital_Read.c OPTIMIZE(8,SPEED) BROWSE DEBUG 
+                    -OBJECTEXTEND PRINT(.\Listings\Digital_Read.lst) TABS(2) OBJECT(.\Objects\Digital_Read.obj)
+
+line level    source
+
+   1          
+   2          #include "Digital_Read.h"
+   3          #include "GPIO.h"
+   4          
+   5          unsigned char Digital_Read(unsigned char Pin)
+   6          {
+   7   1        if(Pin < 8)
+   8   1        {
+   9   2          if((P0 &(1<<Pin)) ==0 )
+  10   2          {
+  11   3            return 1;
+  12   3          }
+  13   2        }
+  14   1        if(Pin > 9 && Pin < 18)
+  15   1        {
+  16   2          Pin -= 10;
+  17   2          if((P1 &(1<<Pin)) ==0 )
+  18   2          {
+  19   3            return 1;
+  20   3          }
+  21   2        }
+  22   1          if(Pin > 19 && Pin < 28)
+  23   1        {
+  24   2          Pin -= 20;
+  25   2          if((P2 &(1<<Pin)) ==0 )
+  26   2          {
+  27   3            return 1;
+  28   3          }
+  29   2        }
+  30   1          if(Pin > 29 && Pin < 38)
+  31   1        {
+  32   2          Pin -= 30;
+  33   2          if((P3 & (1<<Pin)) ==0 )
+  34   2          {
+  35   3            return 1;
+  36   3          }
+  37   2        }
+  38   1        return 0;
+  39   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    167    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

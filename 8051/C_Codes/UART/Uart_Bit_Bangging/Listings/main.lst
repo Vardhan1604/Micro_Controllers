@@ -1,0 +1,81 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              11/06/2024 00:31:13 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <reg51.h> 
+   2          
+   3          sbit TX_PIN = P2^0 ;
+   4          sbit RX_PIN = P2^1 ;
+   5          int i;
+   6          void Delay(unsigned int num)
+   7          {
+   8   1        unsigned int i,j;
+   9   1        for(i = 0; i < num; i++)
+  10   1        {
+  11   2          for(j = 0; j < 127; j++);
+  12   2        }
+  13   1      }
+  14          void Tdelay() {
+  15   1        
+  16   1           TMOD = 0x01;
+  17   1          TH0 =0xff;
+  18   1          TL0 = -57;  // at 9600 baud rate
+  19   1          TR0 = 1;
+  20   1          while( TF0 == 0);
+  21   1          TF0 = 0;
+  22   1          TR0 = 0;
+  23   1      }
+  24          
+  25          
+  26          void Uart_Send(unsigned char data_) {
+  27   1          unsigned char i;
+  28   1      
+  29   1          
+  30   1          TX_PIN = 0;  
+  31   1          Tdelay();  
+  32   1      
+  33   1          
+  34   1          for (i = 0; i < 8; i++) {
+  35   2              TX_PIN = (data_ >> i) & 0x01; 
+  36   2              Tdelay(); 
+  37   2          }
+  38   1      
+  39   1          TX_PIN = 1;  
+  40   1          Tdelay();  
+  41   1      }
+  42          void Send_Str(unsigned char *Str)
+  43          {
+  44   1        while(*Str)
+  45   1        {
+  46   2          Uart_Send(*Str);
+  47   2          Str++;
+  48   2          Delay(1);
+  49   2        }   
+  50   1      }
+  51          void main() {
+  52   1              Send_Str("WEL COME");
+  53   1              Delay(1);
+  54   1        while(1);
+C51 COMPILER V9.60.7.0   MAIN                                                              11/06/2024 00:31:13 PAGE 2   
+
+  55   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    143    ----
+   CONSTANT SIZE    =      9    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

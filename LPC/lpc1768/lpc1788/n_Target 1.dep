@@ -1,0 +1,9 @@
+Dependencies for Project 'n', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_LPC177x_8x.s)(0x532C1656)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC177x_8x--list .\startup_lpc177x_8x.lst --xref -o .\startup_lpc177x_8x.o --depend .\startup_lpc177x_8x.d)
+F (.\main.c)(0x672E0642)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC177x_8x-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil\ARM\Inc\NXP\LPC177x_8x\LPC177x_8x.h)(0x532C1732)
+I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
+I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
+I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
+I (C:\Keil\ARM\Inc\NXP\LPC177x_8x\system_LPC177x_8x.h)(0x532C1732)

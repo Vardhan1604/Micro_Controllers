@@ -1,0 +1,90 @@
+C51 COMPILER V9.60.7.0   LCD                                                               11/25/2024 18:14:48 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN .\Objects\LCD.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\..\..\Lib\LCD_4Bit_Mode\LCD.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEX
+                    -TEND PRINT(.\Listings\LCD.lst) TABS(2) OBJECT(.\Objects\LCD.obj)
+
+line level    source
+
+   1          #include "GPIO.h"
+   2          #include "LCD.h"
+   3          #include "D:\Micro_Controller\8051\NOV_24 _Projects\Lib\Delay\Delay.h"
+   4          
+   5          void LCD_Busy(void)
+   6          {
+   7   1          Busy = 1;
+   8   1          RS = 0;
+   9   1          RW = 1;
+  10   1          while (Busy == 0);
+  11   1      }
+  12          
+  13          void LCD_Cmd_Write(unsigned char Cmd)
+  14          {
+  15   1          LCD_Busy();
+  16   1          LCD = (Cmd & 0xF0);
+  17   1          RS = 0;
+  18   1          RW = 0;
+  19   1          EN = 1;
+  20   1          Delay_1ms(1);
+  21   1          EN = 0;
+  22   1      
+  23   1          LCD = (Cmd << 4) & 0xF0;
+  24   1          EN = 1;
+  25   1          Delay_1ms(1);
+  26   1          EN = 0;
+  27   1      }
+  28          
+  29          void LCD_Data_Write(unsigned char lcd_data)
+  30          {
+  31   1          LCD_Busy();
+  32   1          LCD = (LCD & 0x0f)|(lcd_data & 0xF0);
+  33   1          RS = 1;
+  34   1          RW = 0;
+  35   1          EN = 1;
+  36   1          Delay_1ms(1);
+  37   1          EN = 0;
+  38   1      
+  39   1          LCD =  (LCD & 0x0f)|(lcd_data << 4) & 0xF0;
+  40   1          EN = 1;
+  41   1          Delay_1ms(1);
+  42   1          EN = 0;
+  43   1      }
+  44          
+  45          void LCD_Init(void)
+  46          {
+  47   1          unsigned char a[6] = {0x02, 0x28, 0x0c, 0x01, 0x06, 0x80};
+  48   1          unsigned int i;
+  49   1      
+  50   1          for (i = 0; i < 6; i++)
+  51   1          {
+  52   2              LCD_Cmd_Write(a[i]);
+  53   2              Delay_1ms(10);
+  54   2          }
+C51 COMPILER V9.60.7.0   LCD                                                               11/25/2024 18:14:48 PAGE 2   
+
+  55   1      }
+  56          
+  57          void Sprint(unsigned char *str)
+  58          {
+  59   1          while (*str)
+  60   1          {
+  61   2              LCD_Data_Write(*str);
+  62   2              str++;
+  63   2          }
+  64   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    206    ----
+   CONSTANT SIZE    =      6    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      13
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

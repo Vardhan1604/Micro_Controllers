@@ -1,0 +1,13 @@
+/*
+ * dht11.h
+ *
+ *  Created on: Oct 6, 2024
+ *      Author: maniv
+ */
+
+#ifndef SRC_DHT11_H_
+#define SRC_DHT11_H_
+
+
+
+#endif /* SRC_DHT11_H_ */

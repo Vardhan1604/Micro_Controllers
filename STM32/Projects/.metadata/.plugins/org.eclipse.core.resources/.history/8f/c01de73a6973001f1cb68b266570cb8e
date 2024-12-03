@@ -1,0 +1,14 @@
+#ifndef LCD_I2C_H
+#define LCD_I2C_H
+
+#include "stm32wbaxx_hal.h"
+
+// LCD I2C address (0x27 is a common address, adjust if necessary)
+#define LCD_ADDR 0x27 << 1
+
+// Function prototypes
+void LCD_Init(I2C_HandleTypeDef *hi2c);
+void LCD_Clear(I2C_HandleTypeDef *hi2c);
+void LCD_Print(I2C_HandleTypeDef *hi2c, const char *str);
+
+#endif // LCD_I2C_H

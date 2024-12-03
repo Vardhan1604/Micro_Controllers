@@ -1,0 +1,12 @@
+#ifndef LIQUIDCRYSTAL_I2C_H
+#define LIQUIDCRYSTAL_I2C_H
+
+#include "stm32wbaxx_hal.h"
+
+void lcd_Init(void);
+void lcd_Clear(void);
+void lcd_SetCursor(uint8_t row, uint8_t col);
+void lcd_PrintStr(const char *str);
+void lcd_PrintInt(uint8_t num);
+
+#endif // LIQUIDCRYSTAL_I2C_H

@@ -1,0 +1,100 @@
+/*
+ * dht11.c
+ *
+ *  Created on: Oct 5, 2024
+ *      Author: maniv
+ */
+
+#include"dht11.h"
+#include"main,h"
+
+static uint8_t RHI, RHD, TCI, TCD, SUM;
+static uint32_t pMillis, cMillis;
+
+
+
+void DHT11_Init(void)
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = DHT11_PIN;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(DHT11_PORT, &GPIO_InitStruct);
+}
+
+uint8_t DHT11_Start(void)
+{
+    uint8_t Response = 0;
+
+    HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, GPIO_PIN_RESET); // Pull pin low
+    HAL_Delay(20); // Wait for 20ms
+    HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, GPIO_PIN_SET); // Pull pin high
+    microDelay(30); // Wait for 30us
+
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = DHT11_PIN;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(DHT11_PORT, &GPIO_InitStruct); // Set pin as input
+    microDelay(40);
+
+    if (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)))
+    {
+        microDelay(80);
+        if ((HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN))) Response = 1;
+    }
+    pMillis = HAL_GetTick();
+    cMillis = HAL_GetTick();
+    while ((HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)) && pMillis + 2 > cMillis)
+    {
+        cMillis = HAL_GetTick();
+    }
+    return Response;
+}
+
+uint8_t DHT11_Read(void)
+{
+    uint8_t b = 0;
+    for (uint8_t a = 0; a < 8; a++)
+    {
+        pMillis = HAL_GetTick();
+        cMillis = HAL_GetTick();
+        while (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)) && pMillis + 2 > cMillis)
+        {
+            cMillis = HAL_GetTick();
+        }
+        microDelay(40);
+        if (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)))
+            b &= ~(1 << (7 - a));
+        else
+            b |= (1 << (7 - a));
+
+        pMillis = HAL_GetTick();
+        cMillis = HAL_GetTick();
+        while ((HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)) && pMillis + 2 > cMillis)
+        {
+            cMillis = HAL_GetTick();
+        }
+    }
+    return b;
+}
+
+void DHT11_GetData(float *temperature, float *humidity)
+{
+    if (DHT11_Start())
+    {
+        RHI = DHT11_Read(); // Relative humidity integral
+        RHD = DHT11_Read(); // Relative humidity decimal
+        TCI = DHT11_Read(); // Celsius integral
+        TCD = DHT11_Read(); // Celsius decimal
+        SUM = DHT11_Read(); // Check sum
+
+        if (RHI + RHD + TCI + TCD == SUM)
+        {
+            *temperature = (float)TCI + (float)(TCD / 10.0);
+            *humidity = (float)RHI + (float)(RHD / 10.0);
+        }
+    }
+}
+

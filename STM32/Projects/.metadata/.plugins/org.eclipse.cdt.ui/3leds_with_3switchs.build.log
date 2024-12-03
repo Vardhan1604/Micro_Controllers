@@ -1,0 +1,10 @@
+23:31:27 **** Incremental Build of configuration Debug for project 3leds_with_3switchs ****
+make -j12 all 
+arm-none-eabi-size  3leds_with_3switchs.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11984	     60	   1772	  13816	   35f8	3leds_with_3switchs.elf
+Finished building: default.size.stdout
+ 
+
+23:31:27 Build Finished. 0 errors, 0 warnings. (took 625ms)
+

@@ -1,0 +1,17 @@
+07:05:11 **** Incremental Build of configuration Debug for project ddht ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32WBA52xx -c -I../Core/Inc -I../Drivers/STM32WBAxx_HAL_Driver/Inc -I../Drivers/STM32WBAxx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32WBAxx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ddht.elf" @"objects.list"   -mcpu=cortex-m33 -T"D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\STM32WBA52CGUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ddht.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ddht.elf
+ 
+arm-none-eabi-size  ddht.elf 
+arm-none-eabi-objdump -h -S ddht.elf  > "ddht.list"
+   text	   data	    bss	    dec	    hex	filename
+  28880	    468	   2092	  31440	   7ad0	ddht.elf
+Finished building: default.size.stdout
+ 
+Finished building: ddht.list
+ 
+
+07:05:11 Build Finished. 0 errors, 0 warnings. (took 696ms)
+

@@ -1,0 +1,10 @@
+19:13:41 **** Incremental Build of configuration Debug for project dd ****
+make -j12 all 
+arm-none-eabi-size  dd.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29160	    468	   2244	  31872	   7c80	dd.elf
+Finished building: default.size.stdout
+ 
+
+19:13:41 Build Finished. 0 errors, 0 warnings. (took 181ms)
+

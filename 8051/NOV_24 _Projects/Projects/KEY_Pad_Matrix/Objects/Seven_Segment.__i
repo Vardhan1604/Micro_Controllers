@@ -1,0 +1,1 @@
+"..\..\Lib\Seven_Segment\Seven_Segment.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Seven_Segment.lst) TABS (2) OBJECT(.\Objects\Seven_Segment.obj)

@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\Serial_Interrupt" 
+PRINT(".\Listings\Serial_Interrupt.m51") CODE( 0X0000-0X0FFF )

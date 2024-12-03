@@ -1,0 +1,7 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\Delay.obj",
+".\Objects\LCD.obj",
+".\Objects\KEYPAD.obj" 
+TO ".\Objects\Key_Pad_Matrix" 
+PRINT(".\Listings\Key_Pad_Matrix.m51")

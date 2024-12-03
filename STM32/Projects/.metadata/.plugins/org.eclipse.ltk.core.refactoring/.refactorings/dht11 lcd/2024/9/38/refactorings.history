@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;dht11 lcd/Core/Src/i2c-lcd.c&apos; to &apos;liquidcrystal_i2c.c&apos;" description="Rename resource &apos;i2c-lcd.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/i2c-lcd.c" name="liquidcrystal_i2c.c" stamp="1726400070620" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;dht11 lcd/Core/Inc/i2c-lcd.h&apos; to &apos;liquidcrystal_i2c.h&apos;" description="Rename resource &apos;i2c-lcd.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/i2c-lcd.h" name="liquidcrystal_i2c.h" stamp="1726400084736" updateReferences="true"/>
+</session>

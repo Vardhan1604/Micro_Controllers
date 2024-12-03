@@ -1,0 +1,54 @@
+C51 COMPILER V9.60.7.0   SWITCH                                                            11/15/2024 14:14:16 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE SWITCH
+OBJECT MODULE PLACED IN .\Objects\Switch.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\..\..\Lib\Switch\Switch.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND
+                    - PRINT(.\Listings\Switch.lst) TABS(2) OBJECT(.\Objects\Switch.obj)
+
+line level    source
+
+   1          
+   2          #include "Switch.h"
+   3          #include "GPIO.h"
+   4          #include "../Delay/Delay.h"
+   5          
+   6          unsigned char Switch1(void)
+   7          {
+   8   1          if (Sw == 0)
+   9   1          {
+  10   2              Delay_1ms(500);
+  11   2              if (Sw == 0)
+  12   2              {
+  13   3                  return 1;
+  14   3              }
+  15   2          }
+  16   1          return 0;
+  17   1      }
+  18          
+  19          unsigned char Switch2(void)
+  20          {
+  21   1          if (Sw1 == 0)
+  22   1          {
+  23   2              Delay_1ms(500);
+  24   2              if (Sw1 == 0)
+  25   2              {
+  26   3                  return 1;
+  27   3              }
+  28   2          }
+  29   1          return 0;
+  30   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     38    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

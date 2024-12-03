@@ -1,0 +1,8 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\Delay.obj",
+".\Objects\LCD.obj",
+".\Objects\ADC.obj" 
+TO ".\Objects\LM35_LCD" 
+PRINT(".\Listings\LM35_LCD.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

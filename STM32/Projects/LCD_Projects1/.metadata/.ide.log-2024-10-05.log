@@ -1,0 +1,49 @@
+2024-10-06 02:06:00,411 [INFO] I2cTimingTraitement:330 - 0x00606092
+2024-10-06 02:06:06,461 [INFO] I2cTimingTraitement:330 - 0x10C0ECFF
+2024-10-06 02:06:10,059 [INFO] I2cTimingTraitement:330 - 0x10707DBC
+2024-10-06 02:06:15,505 [INFO] I2cTimingTraitement:330 - 0x10C0ECFF
+2024-10-06 02:06:18,186 [INFO] I2cTimingTraitement:330 - 0x10707DBC
+2024-10-06 02:06:22,967 [INFO] I2cTimingTraitement:330 - 0x10707DBC
+2024-10-06 02:06:24,385 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 835917424 Bytes (1073741824)
+2024-10-06 02:06:25,051 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 857937520 Bytes (1073741824)
+2024-10-06 02:06:26,238 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 903548528 Bytes (1073741824)
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: MEMORYMAP
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: TIM1_8WBA5
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: PWR
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ICACHE
+2024-10-06 02:06:26,354 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-10-06 02:06:26,355 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.0.202406281431\\db\
+2024-10-06 02:06:26,425 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\MXTmpFiles\license.tmp_save
+2024-10-06 02:06:26,484 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\MXTmpFiles\license.tmp
+2024-10-06 02:06:26,522 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\MXTmpFiles\gpio.tmp_save
+2024-10-06 02:06:26,577 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\MXTmpFiles\gpio.tmp
+2024-10-06 02:06:26,707 [WARN] IPConfigManager:98 - WARNING: Missing Config File for MEMORYMAP ip!!
+2024-10-06 02:06:26,708 [WARN] IP:2191 - DefaultDataRegion not found: check if there is a RefParameter without a condition.
+2024-10-06 02:06:26,831 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\MXTmpFiles\cortex.tmp_save
+2024-10-06 02:06:26,878 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\MXTmpFiles\cortex.tmp
+2024-10-06 02:06:26,886 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Src\stm32wbaxx_it.c_save
+2024-10-06 02:06:26,998 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Src\stm32wbaxx_it.c
+2024-10-06 02:06:27,000 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Inc\stm32wbaxx_it.h_save
+2024-10-06 02:06:27,042 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Inc\stm32wbaxx_it.h
+2024-10-06 02:06:27,050 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Src\stm32wbaxx_hal_msp.c_save
+2024-10-06 02:06:27,115 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Src\stm32wbaxx_hal_msp.c
+2024-10-06 02:06:27,116 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\MXTmpFiles\system.tmp_save
+2024-10-06 02:06:27,156 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\MXTmpFiles\system.tmp
+2024-10-06 02:06:27,161 [INFO] CodeEngine:311 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Inc\stm32wbaxx_hal_conf.h_save
+2024-10-06 02:06:27,206 [INFO] CodeEngine:335 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Inc\stm32wbaxx_hal_conf.h
+2024-10-06 02:06:27,213 [WARN] IPConfigManager:3554 - IP not found : TIM
+2024-10-06 02:06:27,213 [WARN] CodeGenerator:4002 - IP not found : null
+2024-10-06 02:06:27,217 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Inc\main.h_save
+2024-10-06 02:06:27,269 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Inc\main.h
+2024-10-06 02:06:27,271 [INFO] CodeEngine:255 - oldGeneratedFile, D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Src\main.c_save
+2024-10-06 02:06:27,349 [INFO] CodeEngine:279 - Generated code: D:\Micro_Controller\STM32\Projects\LCD_Projects1\ddht\Core\Src\main.c
+2024-10-06 02:06:27,547 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 71mS.
+2024-10-06 02:06:27,549 [INFO] ProjectBuilder:4828 - Project Generator version: 4.4.0-B60
+2024-10-06 02:06:27,609 [INFO] ConfigFileManager:1531 - The Die is : DIE492
+2024-10-06 02:06:28,131 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 582mS.
+2024-10-06 02:06:28,131 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-10-06 02:06:28,132 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.

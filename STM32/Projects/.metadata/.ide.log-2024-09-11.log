@@ -1,0 +1,177 @@
+2024-09-12 00:01:24,029 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 409140232 Bytes (880803840)
+2024-09-12 00:01:26,146 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 430633992 Bytes (880803840)
+2024-09-12 00:01:26,250 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 491451400 Bytes (880803840)
+2024-09-12 00:01:26,364 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: MEMORYMAP
+2024-09-12 00:01:26,364 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: PWR
+2024-09-12 00:01:26,364 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-09-12 00:01:26,364 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-09-12 00:01:26,364 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-09-12 00:01:26,364 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ICACHE
+2024-09-12 00:01:26,364 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NUCLEO-WBA52CG
+2024-09-12 00:01:26,364 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-09-12 00:01:26,365 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.0.202406281431\\db\
+2024-09-12 00:01:26,456 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\license.tmp_save
+2024-09-12 00:01:26,510 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\license.tmp
+2024-09-12 00:01:26,518 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\gpio.tmp_save
+2024-09-12 00:01:26,568 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\gpio.tmp
+2024-09-12 00:01:26,574 [WARN] IPConfigManager:98 - WARNING: Missing Config File for MEMORYMAP ip!!
+2024-09-12 00:01:26,574 [WARN] IP:2191 - DefaultDataRegion not found: check if there is a RefParameter without a condition.
+2024-09-12 00:01:26,591 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\cortex.tmp_save
+2024-09-12 00:01:26,635 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\cortex.tmp
+2024-09-12 00:01:26,640 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_nucleo_conf.h_save
+2024-09-12 00:01:26,685 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_nucleo_conf.h
+2024-09-12 00:01:26,687 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_inc.tmp_save
+2024-09-12 00:01:26,728 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_inc.tmp
+2024-09-12 00:01:26,729 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_vars.tmp_save
+2024-09-12 00:01:26,770 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_vars.tmp
+2024-09-12 00:01:26,772 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_init.tmp_save
+2024-09-12 00:01:26,814 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_init.tmp
+2024-09-12 00:01:26,816 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_before_while.tmp_save
+2024-09-12 00:01:26,856 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_before_while.tmp
+2024-09-12 00:01:26,858 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_inside_while.tmp_save
+2024-09-12 00:01:26,900 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_inside_while.tmp
+2024-09-12 00:01:26,902 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_fct.tmp_save
+2024-09-12 00:01:26,947 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_fct.tmp
+2024-09-12 00:01:26,949 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_gpio.tmp_save
+2024-09-12 00:01:26,992 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_gpio.tmp
+2024-09-12 00:01:26,999 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\stm32wbaxx_it.c_save
+2024-09-12 00:01:27,059 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\stm32wbaxx_it.c
+2024-09-12 00:01:27,062 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_it.h_save
+2024-09-12 00:01:27,106 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_it.h
+2024-09-12 00:01:27,113 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\stm32wbaxx_hal_msp.c_save
+2024-09-12 00:01:27,176 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\stm32wbaxx_hal_msp.c
+2024-09-12 00:01:27,178 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\system.tmp_save
+2024-09-12 00:01:27,178 [ERROR] IocParser:95 - Exception caught: Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+2024-09-12 00:01:27,219 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\system.tmp
+2024-09-12 00:01:27,223 [INFO] CodeEngine:311 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_hal_conf.h_save
+2024-09-12 00:01:27,267 [INFO] CodeEngine:335 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_hal_conf.h
+2024-09-12 00:01:27,277 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\main.h_save
+2024-09-12 00:01:27,322 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\main.h
+2024-09-12 00:01:27,324 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\main.c_save
+2024-09-12 00:01:27,393 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\main.c
+2024-09-12 00:01:27,599 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 72mS.
+2024-09-12 00:01:27,601 [INFO] ProjectBuilder:4828 - Project Generator version: 4.4.0-B60
+2024-09-12 00:01:27,658 [INFO] ConfigFileManager:1531 - The Die is : DIE492
+2024-09-12 00:01:28,121 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 520mS.
+2024-09-12 00:01:28,122 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-09-12 00:01:28,123 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-09-12 00:19:02,163 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 486672968 Bytes (880803840)
+2024-09-12 00:19:03,411 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 508168776 Bytes (880803840)
+2024-09-12 00:19:03,728 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 530713192 Bytes (880803840)
+2024-09-12 00:19:03,834 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: MEMORYMAP
+2024-09-12 00:19:03,834 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: PWR
+2024-09-12 00:19:03,835 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-09-12 00:19:03,835 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-09-12 00:19:03,835 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-09-12 00:19:03,835 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ICACHE
+2024-09-12 00:19:03,835 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NUCLEO-WBA52CG
+2024-09-12 00:19:03,835 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-09-12 00:19:03,835 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.0.202406281431\\db\
+2024-09-12 00:19:03,905 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\license.tmp_save
+2024-09-12 00:19:03,994 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\license.tmp
+2024-09-12 00:19:04,001 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\gpio.tmp_save
+2024-09-12 00:19:04,050 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\gpio.tmp
+2024-09-12 00:19:04,056 [WARN] IPConfigManager:98 - WARNING: Missing Config File for MEMORYMAP ip!!
+2024-09-12 00:19:04,056 [WARN] IP:2191 - DefaultDataRegion not found: check if there is a RefParameter without a condition.
+2024-09-12 00:19:04,071 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\cortex.tmp_save
+2024-09-12 00:19:04,123 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\cortex.tmp
+2024-09-12 00:19:04,128 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_nucleo_conf.h_save
+2024-09-12 00:19:04,172 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_nucleo_conf.h
+2024-09-12 00:19:04,174 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_inc.tmp_save
+2024-09-12 00:19:04,215 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_inc.tmp
+2024-09-12 00:19:04,216 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_vars.tmp_save
+2024-09-12 00:19:04,257 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_vars.tmp
+2024-09-12 00:19:04,258 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_init.tmp_save
+2024-09-12 00:19:04,300 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_init.tmp
+2024-09-12 00:19:04,301 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_before_while.tmp_save
+2024-09-12 00:19:04,341 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_before_while.tmp
+2024-09-12 00:19:04,342 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_inside_while.tmp_save
+2024-09-12 00:19:04,382 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_inside_while.tmp
+2024-09-12 00:19:04,384 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_fct.tmp_save
+2024-09-12 00:19:04,424 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_fct.tmp
+2024-09-12 00:19:04,426 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_gpio.tmp_save
+2024-09-12 00:19:04,470 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_gpio.tmp
+2024-09-12 00:19:04,477 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\stm32wbaxx_it.c_save
+2024-09-12 00:19:04,585 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\stm32wbaxx_it.c
+2024-09-12 00:19:04,587 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_it.h_save
+2024-09-12 00:19:04,629 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_it.h
+2024-09-12 00:19:04,636 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\stm32wbaxx_hal_msp.c_save
+2024-09-12 00:19:04,697 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\stm32wbaxx_hal_msp.c
+2024-09-12 00:19:04,698 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\system.tmp_save
+2024-09-12 00:19:04,737 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\system.tmp
+2024-09-12 00:19:04,742 [INFO] CodeEngine:311 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_hal_conf.h_save
+2024-09-12 00:19:04,786 [INFO] CodeEngine:335 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_hal_conf.h
+2024-09-12 00:19:04,795 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\main.h_save
+2024-09-12 00:19:04,851 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\main.h
+2024-09-12 00:19:04,853 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\main.c_save
+2024-09-12 00:19:04,882 [ERROR] IocParser:95 - Exception caught: Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+2024-09-12 00:19:04,926 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\main.c
+2024-09-12 00:19:05,116 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 67mS.
+2024-09-12 00:19:05,118 [INFO] ProjectBuilder:4828 - Project Generator version: 4.4.0-B60
+2024-09-12 00:19:05,175 [INFO] ConfigFileManager:1531 - The Die is : DIE492
+2024-09-12 00:19:05,625 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 507mS.
+2024-09-12 00:19:05,626 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-09-12 00:19:05,627 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-09-12 00:33:40,315 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x161,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-09-12 00:38:54,126 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-09-12 00:39:00,692 [WARN] MainPanel:400 - Warning: This peripheral has no parameters to be configured
+2024-09-12 00:39:02,345 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-09-12 00:39:08,747 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-09-12 00:39:10,327 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-09-12 00:40:30,924 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 292311440 Bytes (880803840)
+2024-09-12 00:40:32,091 [ERROR] IocParser:95 - Exception caught: Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+2024-09-12 00:40:32,315 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 317777328 Bytes (880803840)
+2024-09-12 00:40:32,425 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 370428304 Bytes (880803840)
+2024-09-12 00:40:32,944 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: MEMORYMAP
+2024-09-12 00:40:32,944 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: PWR
+2024-09-12 00:40:32,944 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-09-12 00:40:32,944 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-09-12 00:40:32,944 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-09-12 00:40:32,944 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ICACHE
+2024-09-12 00:40:32,944 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NUCLEO-WBA52CG
+2024-09-12 00:40:32,944 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-09-12 00:40:32,944 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.0.202406281431\\db\
+2024-09-12 00:40:32,999 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\license.tmp_save
+2024-09-12 00:40:33,053 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\license.tmp
+2024-09-12 00:40:33,059 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\gpio.tmp_save
+2024-09-12 00:40:33,103 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\gpio.tmp
+2024-09-12 00:40:33,108 [WARN] IPConfigManager:98 - WARNING: Missing Config File for MEMORYMAP ip!!
+2024-09-12 00:40:33,108 [WARN] IP:2191 - DefaultDataRegion not found: check if there is a RefParameter without a condition.
+2024-09-12 00:40:33,121 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\cortex.tmp_save
+2024-09-12 00:40:33,169 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\cortex.tmp
+2024-09-12 00:40:33,174 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_nucleo_conf.h_save
+2024-09-12 00:40:33,215 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_nucleo_conf.h
+2024-09-12 00:40:33,217 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_inc.tmp_save
+2024-09-12 00:40:33,257 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_inc.tmp
+2024-09-12 00:40:33,258 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_vars.tmp_save
+2024-09-12 00:40:33,298 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_vars.tmp
+2024-09-12 00:40:33,301 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_init.tmp_save
+2024-09-12 00:40:33,342 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_init.tmp
+2024-09-12 00:40:33,344 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_before_while.tmp_save
+2024-09-12 00:40:33,385 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_before_while.tmp
+2024-09-12 00:40:33,386 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_inside_while.tmp_save
+2024-09-12 00:40:33,426 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_inside_while.tmp
+2024-09-12 00:40:33,428 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_fct.tmp_save
+2024-09-12 00:40:33,468 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_fct.tmp
+2024-09-12 00:40:33,469 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\bsp_common_demo_gpio.tmp_save
+2024-09-12 00:40:33,509 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\bsp_common_demo_gpio.tmp
+2024-09-12 00:40:33,515 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\stm32wbaxx_it.c_save
+2024-09-12 00:40:33,618 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\stm32wbaxx_it.c
+2024-09-12 00:40:33,620 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_it.h_save
+2024-09-12 00:40:33,661 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_it.h
+2024-09-12 00:40:33,668 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\stm32wbaxx_hal_msp.c_save
+2024-09-12 00:40:33,736 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\stm32wbaxx_hal_msp.c
+2024-09-12 00:40:33,738 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\MXTmpFiles\system.tmp_save
+2024-09-12 00:40:33,778 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\MXTmpFiles\system.tmp
+2024-09-12 00:40:33,782 [INFO] CodeEngine:311 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\stm32wbaxx_hal_conf.h_save
+2024-09-12 00:40:33,839 [INFO] CodeEngine:335 - Generated code: D:\stm32\led blink\Core\Inc\stm32wbaxx_hal_conf.h
+2024-09-12 00:40:33,848 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Inc\main.h_save
+2024-09-12 00:40:33,903 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Inc\main.h
+2024-09-12 00:40:33,905 [INFO] CodeEngine:255 - oldGeneratedFile, D:\stm32\led blink\Core\Src\main.c_save
+2024-09-12 00:40:33,977 [INFO] CodeEngine:279 - Generated code: D:\stm32\led blink\Core\Src\main.c
+2024-09-12 00:40:34,188 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 67mS.
+2024-09-12 00:40:34,189 [INFO] ProjectBuilder:4828 - Project Generator version: 4.4.0-B60
+2024-09-12 00:40:34,246 [INFO] ConfigFileManager:1531 - The Die is : DIE492
+2024-09-12 00:40:34,675 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 486mS.
+2024-09-12 00:40:34,675 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-09-12 00:40:34,676 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.

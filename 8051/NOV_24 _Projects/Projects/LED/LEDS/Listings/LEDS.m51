@@ -1,0 +1,287 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    11/15/2024  20:42:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj, .\Objects\Digital_Write.obj, .\Objects\Delay.obj,
+>>  .\Objects\Digital_Read.obj TO .\Objects\LEDS PRINT (.\Listings\LEDS.m51) CODE (0X0000-0X0FFF)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  .\Objects\Digital_Write.obj (DIGITAL_WRITE)
+  .\Objects\Delay.obj (DELAY)
+  .\Objects\Digital_Read.obj (DIGITAL_READ)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?IMUL)
+
+
+LINK MAP OF MODULE:  .\Objects\LEDS (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     00BEH     UNIT         ?PR?_DIGITAL_WRITE?DIGITAL_WRITE
+            CODE    08BEH     00A7H     UNIT         ?PR?_DIGITAL_READ?DIGITAL_READ
+            CODE    0965H     0020H     UNIT         ?PR?_DELAY_1MS?DELAY
+            CODE    0985H     001CH     UNIT         ?PR?MAIN?MAIN
+            CODE    09A1H     0012H     UNIT         ?C?LIB_CODE
+            CODE    09B3H     000CH     UNIT         ?C_C51STARTUP
+            CODE    09BFH     000AH     UNIT         ?PR?_DELAY_1S?DELAY
+            CODE    09C9H     000AH     UNIT         ?PR?_DELAY_1MIN?DELAY
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\LEDS (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?_DIGITAL_READ?DIGITAL_READ
+  +--> ?PR?_DIGITAL_WRITE?DIGITAL_WRITE
+  +--> ?PR?_DELAY_1MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\LEDS (?C_STARTUP)
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  11/15/2024  20:42:42  PAGE 2
+
+
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:09B3H         SEGMENT       ?C_C51STARTUP
+  I:0008H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:09B6H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:09B3H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:09B3H         LINE#         133
+  C:09B5H         LINE#         134
+  C:09B6H         LINE#         135
+  C:09B7H         LINE#         136
+  C:09B9H         LINE#         185
+  C:09BCH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0985H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0985H         LINE#         7
+  C:0985H         LINE#         10
+  C:0985H         LINE#         11
+  C:0985H         LINE#         12
+  C:0985H         LINE#         14
+  C:098DH         LINE#         15
+  C:098DH         LINE#         16
+  C:098FH         LINE#         17
+  C:0991H         LINE#         19
+  C:0991H         LINE#         20
+  C:0998H         LINE#         21
+  C:0998H         LINE#         24
+  C:099FH         LINE#         25
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  11/15/2024  20:42:42  PAGE 3
+
+
+
+  -------         MODULE        DIGITAL_WRITE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0800H         PUBLIC        _Digital_Write
+  -------         PROC          _DIGITAL_WRITE
+  D:0007H         SYMBOL        Pin
+  D:0005H         SYMBOL        State
+  C:0800H         LINE#         4
+  C:0800H         LINE#         5
+  C:0800H         LINE#         6
+  C:0806H         LINE#         7
+  C:0806H         LINE#         8
+  C:0809H         LINE#         9
+  C:0809H         LINE#         10
+  C:0816H         LINE#         11
+  C:0818H         LINE#         12
+  C:081BH         LINE#         13
+  C:081BH         LINE#         14
+  C:0828H         LINE#         15
+  C:0828H         LINE#         16
+  C:0828H         LINE#         17
+  C:0839H         LINE#         18
+  C:0839H         LINE#         19
+  C:083DH         LINE#         20
+  C:0840H         LINE#         21
+  C:0840H         LINE#         22
+  C:084CH         LINE#         23
+  C:084EH         LINE#         24
+  C:0851H         LINE#         25
+  C:0851H         LINE#         26
+  C:085EH         LINE#         27
+  C:085EH         LINE#         28
+  C:0869H         LINE#         29
+  C:0869H         LINE#         30
+  C:086DH         LINE#         31
+  C:0870H         LINE#         32
+  C:0870H         LINE#         33
+  C:087CH         LINE#         34
+  C:087EH         LINE#         35
+  C:0881H         LINE#         36
+  C:0881H         LINE#         37
+  C:088EH         LINE#         38
+  C:088EH         LINE#         39
+  C:088EH         LINE#         40
+  C:0899H         LINE#         41
+  C:0899H         LINE#         42
+  C:089DH         LINE#         43
+  C:08A0H         LINE#         44
+  C:08A0H         LINE#         45
+  C:08ACH         LINE#         46
+  C:08ADH         LINE#         47
+  C:08B0H         LINE#         48
+  C:08B0H         LINE#         49
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  11/15/2024  20:42:42  PAGE 4
+
+
+  C:08BDH         LINE#         50
+  C:08BDH         LINE#         51
+  C:08BDH         LINE#         52
+  C:08BDH         LINE#         54
+  -------         ENDPROC       _DIGITAL_WRITE
+  -------         ENDMOD        DIGITAL_WRITE
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:09C9H         PUBLIC        _Delay_1Min
+  C:0965H         PUBLIC        _Delay_1ms
+  C:09BFH         PUBLIC        _Delay_1s
+  -------         PROC          _DELAY_1MS
+  D:0006H         SYMBOL        Num
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0965H         LINE#         2
+  C:0965H         LINE#         3
+  C:0965H         LINE#         5
+  C:096FH         LINE#         6
+  C:096FH         LINE#         7
+  C:097DH         LINE#         8
+  C:0984H         LINE#         9
+  -------         ENDPROC       _DELAY_1MS
+  -------         PROC          _DELAY_1S
+  D:0006H         SYMBOL        Num
+  C:09BFH         LINE#         11
+  C:09BFH         LINE#         12
+  C:09BFH         LINE#         13
+  -------         ENDPROC       _DELAY_1S
+  -------         PROC          _DELAY_1MIN
+  D:0006H         SYMBOL        Num
+  C:09C9H         LINE#         16
+  C:09C9H         LINE#         17
+  C:09C9H         LINE#         18
+  -------         ENDPROC       _DELAY_1MIN
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        DIGITAL_READ
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:08BEH         PUBLIC        _Digital_Read
+  -------         PROC          _DIGITAL_READ
+  D:0005H         SYMBOL        Pin
+  C:08BEH         LINE#         5
+  C:08C0H         LINE#         6
+  C:08C0H         LINE#         7
+  C:08C6H         LINE#         8
+  C:08C6H         LINE#         9
+  C:08DFH         LINE#         10
+  C:08DFH         LINE#         11
+  C:08E2H         LINE#         12
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  11/15/2024  20:42:42  PAGE 5
+
+
+  C:08E2H         LINE#         13
+  C:08E2H         LINE#         14
+  C:08EDH         LINE#         15
+  C:08EDH         LINE#         16
+  C:08F1H         LINE#         17
+  C:090AH         LINE#         18
+  C:090AH         LINE#         19
+  C:090DH         LINE#         20
+  C:090DH         LINE#         21
+  C:090DH         LINE#         22
+  C:0918H         LINE#         23
+  C:0918H         LINE#         24
+  C:091CH         LINE#         25
+  C:0935H         LINE#         26
+  C:0935H         LINE#         27
+  C:0938H         LINE#         28
+  C:0938H         LINE#         29
+  C:0938H         LINE#         30
+  C:0943H         LINE#         31
+  C:0943H         LINE#         32
+  C:0947H         LINE#         33
+  C:095FH         LINE#         34
+  C:095FH         LINE#         35
+  C:0962H         LINE#         36
+  C:0962H         LINE#         37
+  C:0962H         LINE#         38
+  C:0964H         LINE#         39
+  -------         ENDPROC       _DIGITAL_READ
+  -------         ENDMOD        DIGITAL_READ
+
+  -------         MODULE        ?C?IMUL
+  C:09A1H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_1MIN?DELAY
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01C4H BYTE (22%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=470
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

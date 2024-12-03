@@ -1,0 +1,4 @@
+../Core/Src/LCD.c:10:6:LCD_cmd	2
+../Core/Src/LCD.c:26:6:LCD_data	2
+../Core/Src/LCD.c:41:6:LCD_init	2
+../Core/Src/LCD.c:52:6:LCD_Print	2

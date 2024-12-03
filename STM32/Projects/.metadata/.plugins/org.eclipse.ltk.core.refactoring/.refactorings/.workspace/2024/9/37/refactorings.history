@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;led blink&apos; to &apos;three_leds_with_three_switchs&apos;" description="Rename resource &apos;led blink&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/led blink" name="three_leds_with_three_switchs" stamp="1726084555393" updateReferences="true"/>&#x0A;&#x0A;</session>

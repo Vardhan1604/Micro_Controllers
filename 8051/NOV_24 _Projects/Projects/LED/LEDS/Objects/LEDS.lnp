@@ -1,0 +1,7 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\Digital_Write.obj",
+".\Objects\Delay.obj",
+".\Objects\Digital_Read.obj" 
+TO ".\Objects\LEDS" 
+PRINT(".\Listings\LEDS.m51") CODE( 0X0000-0X0FFF )

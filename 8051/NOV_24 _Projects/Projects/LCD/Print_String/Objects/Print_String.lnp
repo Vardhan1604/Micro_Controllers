@@ -1,0 +1,6 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\Delay.obj",
+".\Objects\LCD.obj" 
+TO ".\Objects\Print_String" 
+PRINT(".\Listings\Print_String.m51") RAMSIZE(256) 

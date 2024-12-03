@@ -1,0 +1,36 @@
+#include "liquidcrystal_i2c.h"
+
+// Internal functions to write commands and data to the LCD
+static void LCD_WriteCommand(I2C_HandleTypeDef *hi2c, uint8_t cmd);
+static void LCD_WriteData(I2C_HandleTypeDef *hi2c, uint8_t data);
+
+void LCD_Init(I2C_HandleTypeDef *hi2c) {
+    HAL_Delay(50); // Wait for the LCD to power up
+
+    LCD_WriteCommand(hi2c, 0x38); // Function set: 8-bit, 2-line, 5x8 dots
+    LCD_WriteCommand(hi2c, 0x0C); // Display ON, cursor OFF
+    LCD_WriteCommand(hi2c, 0x01); // Clear display
+    HAL_Delay(2); // Wait for clear to complete
+    LCD_WriteCommand(hi2c, 0x06); // Entry mode: Increment cursor
+}
+
+void LCD_Clear(I2C_HandleTypeDef *hi2c) {
+    LCD_WriteCommand(hi2c, 0x01); // Clear display
+    HAL_Delay(2); // Wait for clear to complete
+}
+
+void LCD_Print(I2C_HandleTypeDef *hi2c, const char *str) {
+    while (*str) {
+        LCD_WriteData(hi2c, *str++);
+    }
+}
+
+static void LCD_WriteCommand(I2C_HandleTypeDef *hi2c, uint8_t cmd) {
+    uint8_t buf[2] = {0x00, cmd}; // Control byte + command
+    HAL_I2C_Master_Transmit(hi2c, LCD_ADDR, buf, 2, HAL_MAX_DELAY);
+}
+
+static void LCD_WriteData(I2C_HandleTypeDef *hi2c, uint8_t data) {
+    uint8_t buf[2] = {0x40, data}; // Data byte
+    HAL_I2C_Master_Transmit(hi2c, LCD_ADDR, buf, 2, HAL_MAX_DELAY);
+}

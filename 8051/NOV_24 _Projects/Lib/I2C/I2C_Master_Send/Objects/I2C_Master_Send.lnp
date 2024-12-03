@@ -1,0 +1,7 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\I2C.obj",
+".\Objects\Delay.obj" 
+TO ".\Objects\I2C_Master_Send" 
+PRINT(".\Listings\I2C_Master_Send.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

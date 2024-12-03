@@ -1,0 +1,6 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\Delay.obj",
+".\Objects\LED.obj" 
+TO ".\Objects\Moving_LEdS" 
+PRINT(".\Listings\Moving_LEdS.m51") CODE( 0X0000-0X0FFF )

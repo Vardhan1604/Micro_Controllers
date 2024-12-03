@@ -1,0 +1,70 @@
+#include "dht11.h"
+
+uint8_t RHI, RHD, TCI, TCD, SUM;
+
+uint8_t DHT11_Start(void) {
+    uint8_t Response = 0;
+    GPIO_InitTypeDef GPIO_InitStructPrivate = {0};
+
+    // Set pin as output and pull low
+    GPIO_InitStructPrivate.Pin = DHT11_PIN;
+    GPIO_InitStructPrivate.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStructPrivate.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStructPrivate.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(DHT11_PORT, &GPIO_InitStructPrivate);
+
+    HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, GPIO_PIN_RESET);
+    HAL_Delay(20);
+    HAL_GPIO_WritePin(DHT11_PORT, DHT11_PIN, GPIO_PIN_SET);
+    microDelay(30);
+
+    // Set pin as input
+    GPIO_InitStructPrivate.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStructPrivate.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(DHT11_PORT, &GPIO_InitStructPrivate);
+
+    microDelay(40);
+    if (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN))) {
+        microDelay(80);
+        if ((HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN))) Response = 1;
+    }
+
+    return Response;
+}
+
+uint8_t DHT11_Read(void) {
+    uint8_t b = 0; // Initialize b
+    for (uint8_t a = 0; a < 8; a++) {
+        uint32_t pMillis = HAL_GetTick();
+        while (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)) && (HAL_GetTick() - pMillis < 2));
+
+        microDelay(40); // Wait for 40us
+        if (!(HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN))) {
+            b &= ~(1 << (7 - a)); // Set bit to 0
+        } else {
+            b |= (1 << (7 - a)); // Set bit to 1
+        }
+
+        pMillis = HAL_GetTick();
+        while ((HAL_GPIO_ReadPin(DHT11_PORT, DHT11_PIN)) && (HAL_GetTick() - pMillis < 2));
+    }
+    return b;
+}
+
+/*int readDHT11(float *temperature, float *humidity) {
+    if (DHT11_Start()) {
+        RHI = DHT11_Read(); // Relative humidity integral
+        RHD = DHT11_Read(); // Relative humidity decimal
+        TCI = DHT11_Read(); // Celsius integral
+        TCD = DHT11_Read(); // Celsius decimal
+        SUM = DHT11_Read(); // Check sum
+
+        // Verify checksum: SUM should equal RHI + RHD + TCI + TCD
+        if (SUM == (RHI + RHD + TCI + TCD)) {
+            *temperature = (float)TCI + (float)(TCD / 10.0); // Return temperature
+            *humidity = (float)RHI + (float)(RHD / 10.0); // Return humidity
+            return 0; // Success
+        }
+    }
+    return -1; // Error
+}*/

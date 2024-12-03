@@ -1,0 +1,6 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\Delay.obj",
+".\Objects\LED.obj" 
+TO ".\Objects\Dancing_LED_S" 
+PRINT(".\Listings\Dancing_LED_S.m51")

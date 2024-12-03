@@ -1,0 +1,25 @@
+
+#include"main.h"
+
+
+
+uint8_t DHT11_Init()
+{
+	void DHT11_Start (void);
+	uint8_t Check_Response (void);
+	uint8_t DHT11_Read (void);
+	 Rh_byte1 = DHT11_Read ();
+	 Rh_byte2 = DHT11_Read ();
+	 Temp_byte1 = DHT11_Read ();
+	 Temp_byte2 = DHT11_Read ();
+	 SUM = DHT11_Read();
+
+	 TEMP = Temp_byte1;
+	 RH = Rh_byte1;
+     Temperature = (float) TEMP;
+     Humidity = (float) RH;
+
+     HAL_Delay(3000);
+
+     return;
+}

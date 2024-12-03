@@ -1,0 +1,60 @@
+Configuration	LCD_PASS_CHECK
+STM32CubeMX 	6.12.0
+Date	10/01/2024
+MCU	STM32WBA52CGUx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+PWR	Privilege attributes	PWR_VS_SECSignals	VP_PWR_VS_SECSignals
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+16	PC15-OSC32_OUT*	RCC_OSC32_OUT	RCC_OSC32_OUT
+17	PC14-OSC32_IN*	RCC_OSC32_IN	RCC_OSC32_IN
+26	PA14 (JTCK/SWCLK)*	DEBUG_JTCK-SWCLK	DEBUG_JTCK-SWCLK
+27	PA13 (JTMS/SWDIO)*	DEBUG_JTMS-SWDIO	DEBUG_JTMS-SWDIO
+40	OSC_OUT*	RCC_OSC_OUT	RCC_OSC_OUT
+41	OSC_IN*	RCC_OSC_IN	RCC_OSC_IN
+PERIPHERALS	MODES	FUNCTIONS	PINS
+PWR	Privilege attributes	PWR_VS_SECSignals	VP_PWR_VS_SECSignals
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+16	PC15-OSC32_OUT*	RCC_OSC32_OUT	RCC_OSC32_OUT
+17	PC14-OSC32_IN*	RCC_OSC32_IN	RCC_OSC32_IN
+26	PA14 (JTCK/SWCLK)*	DEBUG_JTCK-SWCLK	DEBUG_JTCK-SWCLK
+27	PA13 (JTMS/SWDIO)*	DEBUG_JTMS-SWDIO	DEBUG_JTMS-SWDIO
+40	OSC_OUT*	RCC_OSC_OUT	RCC_OSC_OUT
+41	OSC_IN*	RCC_OSC_IN	RCC_OSC_IN
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : LCD_PASS_CHECK
+Project Folder : D:\Micro_Controller\STM32\Projects\LCD_Projects\LCD_PASS_CHECK
+Toolchain / IDE : STM32CubeIDE
+Firmware Package Name and Version : STM32Cube FW_WBA V1.4.1
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+

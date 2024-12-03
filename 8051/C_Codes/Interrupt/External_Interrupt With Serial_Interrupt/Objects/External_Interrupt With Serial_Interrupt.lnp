@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\External_Interrupt With Serial_Interrupt" 
+PRINT(".\Listings\External_Interrupt With Serial_Interrupt.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

@@ -1,0 +1,4 @@
+../Core/Src/LCD.c:10:6:LCD_cmd	24	static
+../Core/Src/LCD.c:26:6:LCD_data	24	static
+../Core/Src/LCD.c:41:6:LCD_init	24	static
+../Core/Src/LCD.c:52:6:LCD_Print	16	static
